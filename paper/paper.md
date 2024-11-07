@@ -64,6 +64,7 @@ event: BioHackathon Europe 2024
 
 The mining and study of mentions of software in the scientific literature has recenntly received much attention.
 
+Mention Apicuron?
 
 Erik - would you like to expand on this background?
 
@@ -73,6 +74,8 @@ The Chan Zuckerberg Initiative (CZI) has produced a software mentions dataset, C
 
 Schindler et al. [@PMID35111920] constructed a knowledge graph from software mentions in the scientific literature, differenting different types of software, such as applications, plugins, or operating systems, and types of mention, including usage, creation and deposition. The bio.tools corpus built primarily from primary publications would be expected to cover all types of mention, including describing the creation and availability (deposition) of the tool, as well as some use cases (usage).
 
+OpenEBench is providing technical and scientific benchmarks to assess software usage and popularity. However, like other approaches, it mostly bases on citations and thus might underestimate the impact of a software tool.
+
 Software synonyms - SciCrunch
 
 Disambiguation (if anyone looked at this?)
@@ -81,6 +84,8 @@ Disambiguation (if anyone looked at this?)
 ## bio.tools
 
 bio.tools [@PMID31405382] is a comprehensive registry of bioinformatics tools and data services, designed to assist researchers in discovering, understanding, and utilizing software resources in the life sciences. Developed under the ELIXIR infrastructure, it serves as a centralized platform for accessing essential scientific and technical metadata about various bioinformatics tools, databases, and services. This metadata includes software licenses, operating system compatibility, repository URLs, but also semantic notation of the operation(s) performed by (or with) the software, and the data types and file format consumed and produced in the EDAM ontology [@PMID23479348].
+
+TODO: EDAM and other metadata as distinguishing features to finding and describing software.
 
 
 ## bio.tools and the literature
@@ -103,6 +108,20 @@ To illustrate the challenges of matching Europe PMC article with bio.tools entie
 
 
 As expected, we find many mentions of "comet" and "mascot" not referring to the software for peptide-spectrum matching. We also find instances of software being cited but not mentioned, e.g. the Comet paper is cited in [@PMID30702898] in a sentence "Application of these PSM algorithms (e.g., SEQUEST, X!Tandem)[@PMID24226387][@PMID23148064][@PMID14558131] have been successfully applied to metaproteomic analyses, despite the fact that they were never designed to deal with the complexity of metaproteomic data sets". Searching the name of the software together with some EDAM Topics, such as "Proteomics" helps find specific mentions with or without citation. If searching all literature, a large fraction of the mention-without-citation cases derive from non-open access papers, where the search is limited to titles and abstracts, but all citations are available.
+
+
+## Results
+
+### General Comparison
+
+We used the Europe PMC API to query both for citations and mentioned software tools. For that we used the following approach:
+- Take >30k software tools described in bio.tools and filter for tools with a open access publication
+- Apply the following two queries to the Europe PMC API, each applied to the resulting 13k tools:
+  - A: Citations of given publication of a tool
+  - B: Keyword search of the entire literature corpus: `"SOFTWARE NAME" AND (EDAM_TOPIC1 OR EDAM_TOPIC2 OR ...)`
+
+Including the EDAM topics of a software tool considerable decreased the number of unrelated publications for software names similar or equal to 
+widely used words, such as "comet", "Claudio" and "FUJI".
 
 ### Subsection level 3
 
