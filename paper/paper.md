@@ -38,15 +38,15 @@ authors:
 affiliations:
  - name: University of Southern Denmark, Campusvej 55, 5230, Odense, Denmark
    index: 1
- - name:
+ - name: Institute of Computer Science, University of Tartu. J Liivi 2, Tartu, Estonia
    index: 2
  - name: Leiden University Medical Center, Albinusdreef 2, 2333 ZA, Leiden, The Netherlands
    index: 3
  - name: School of Biological Sciences, University of Southampton, Southampton, SO17 1BJ, UK
    index: 4
- - name:
+ - name: Literature Services, EMBL-EBI, Wellcome Trust Genome Campus, Cambridge, UK
    index: 5
- - name: Sanquin Research, Amsterdam, The Netherlands
+ - name: Sanquin Research, Amsterdam, Plesmanlaan 125, 1066 CX, The Netherlands
    index: 6
  - name: Netherlands eScience Center, Science Park 402, 1098 XH, Amsterdam, The Netherlands
    index: 7
