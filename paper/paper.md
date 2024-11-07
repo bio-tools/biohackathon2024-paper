@@ -68,13 +68,14 @@ Mention Apicuron?
 
 Erik - would you like to expand on this background?
 
-OpenAIRE...
-
 The Chan Zuckerberg Initiative (CZI) has produced a software mentions dataset, CZ Software Mentions [@istrate2022largedatasetsoftwarementions], where the mentions were extracted with a trained SciBERT model from several sources: the NIH PubMed Central collection and from papers provided by various publishers to the Chan Zuckerberg Initiative.
 
 Schindler et al. [@PMID35111920] constructed a knowledge graph from software mentions in the scientific literature, differenting different types of software, such as applications, plugins, or operating systems, and types of mention, including usage, creation and deposition. The bio.tools corpus built primarily from primary publications would be expected to cover all types of mention, including describing the creation and availability (deposition) of the tool, as well as some use cases (usage).
 
 OpenEBench is providing technical and scientific benchmarks to assess software usage and popularity. However, like other approaches, it mostly bases on citations and thus might underestimate the impact of a software tool.
+
+
+Even larger efforts, such as the domain-agnostic OpenAIRE project [@REF] maintains a knowledge graph of research outcomes, including metadata records about research publications and software.
 
 Software synonyms - SciCrunch
 
