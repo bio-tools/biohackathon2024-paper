@@ -20,7 +20,9 @@ Magnus - Discussion and Conclusion (first draft, for input by everyone)
 
 Veit - Clean up general stats and find some interesting cases, co-writing
 
+# TIMELINE
 
+Have first versions of all of the above before the end of November (Aleks, Ana, Magnus and Veit will meet December 2 in Odense)
 
 
 
