@@ -109,7 +109,14 @@ For example, there are currently four distinct tools named "comet" with differen
 
 To illustrate the challenges of matching Europe PMC article with bio.tools enties, we selected 3 commonly used mass-spectrometry proteomics tools with large numbers of citations in the literature: Comet[@PMID23148064], Mascot[@PMID10612281] and MaxQuant[@PMID19029910]. Figure X illustrates the number of IDs (pmids) identified for the search terms indicated and the overlap between the sets of IDs retrieved.
 
+Examples with Venn diagrams?:
+  comet, comet+proteomics, comet+epigenetics, comet-metagenomics (homonyms and common word)
+  mascot, mascot+proteomics, "mascot server", "mascot server"+proteomics (synonyms and common word)
+  maxquant, maxquant+proteomics (no homonyms or synonyms and common word)
 
+Do each in all literature, and then again in open access literature only (or not-OA and OA literature for more contrast?)
+
+Render with Venny, export to PDF or SVG. Change font if needed and arrange in a 2 x 3 or 3 x 2 panel figure.
 
 [Need to reformat / resize these images. Also may not want all of them?] At least Comet, and maybe at least one other, more complex, example?
 
