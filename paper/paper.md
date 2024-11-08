@@ -72,8 +72,6 @@ The Chan Zuckerberg Initiative (CZI) has produced a software mentions dataset, C
 
 Schindler et al. [@PMID35111920] constructed a knowledge graph from software mentions in the scientific literature, differenting different types of software, such as applications, plugins, or operating systems, and types of mention, including usage, creation and deposition. The bio.tools corpus built primarily from primary publications would be expected to cover all types of mention, including describing the creation and availability (deposition) of the tool, as well as some use cases (usage).
 
-Different types of citation in Europe PMC (supportive, mentioning and contrastive).
-
 OpenEBench is providing technical and scientific benchmarks to assess software usage and popularity. However, like other approaches, it mostly bases on citations and thus might underestimate the impact of a software tool.
 
 
@@ -85,9 +83,11 @@ Disambiguation (if anyone looked at this?)
 
 ## Europe PMC
 
-Europe PMC is a comprehensive, freely accessible database for the life sciences literature, including research articles, reviews, preprints and patents. It provides access full-text (open access) articles, publication metadata, and papers citing or cited by a given article. Entries in nucleotide (EGA, ENA, RefSeq), protein (UniProt, IntAct, PRIDE), and research resource (RRID) databases can be searched and retrieved. Individual text-mined genes, proteins, organisms and chemicals can be displayed and visualized for a subset of open access articles.
+Europe PMC is a comprehensive, freely accessible database for the life sciences literature, including research articles, reviews, preprints and patents. It provides access full-text (open access) articles, publication metadata, and papers citing or cited by a given article. Citations in Europe PMC are categorized in the broad categories of being supportive, mentioning or contrastive. Entries in nucleotide (EGA, ENA, RefSeq), protein (UniProt, IntAct, PRIDE), and research resource (RRID) databases can be searched and retrieved. Individual text-mined genes, proteins, organisms and chemicals can be displayed and visualized for a subset of open access articles.
 
 In addition to its web interface, the Europe PMC Articles and Annotations RESTful APIs and provide programmatic access to all of this information, enabling automatation and sharing of bibliometric workflows [@PMID27122644] integrating search, metadata retrieval and analysis. This makes Europe PMC a powerful platform for exploration and mining of the scientific literature and its connection to broader scientific data.
+
+
 
 
 ## bio.tools
