@@ -36,5 +36,7 @@ Have first versions of all of the above before the end of November (Aleks, Ana, 
 
 - Two different networks: a) co-mentioned tools (through other papers), b) which tools mentions/cites which other tool
 
+- Collect concrete use cases for where these graphs can be used 
+
 
 
