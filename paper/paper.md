@@ -88,13 +88,9 @@ Europe PMC is a comprehensive, freely accessible database for the life sciences 
 In addition to its web interface, the Europe PMC Articles and Annotations RESTful APIs and provide programmatic access to all of this information, enabling automatation and sharing of bibliometric workflows [@PMID27122644] integrating search, metadata retrieval and analysis. This makes Europe PMC a powerful platform for exploration and mining of the scientific literature and its connection to broader scientific data.
 
 
-
-
 ## bio.tools
 
 bio.tools [@PMID31405382] is a comprehensive registry of bioinformatics tools and data services, designed to assist researchers in discovering, understanding, and utilizing software resources in the life sciences. Developed under the ELIXIR infrastructure, it serves as a centralized platform for accessing essential scientific and technical metadata about various bioinformatics tools, databases, and services. This metadata includes software licenses, operating system compatibility, repository URLs, but also semantic notation of the operation(s) performed by (or with) the software, and the data types and file format consumed and produced in the EDAM ontology [@PMID23479348].
-
-TODO: EDAM and other metadata as distinguishing features to finding and describing software.
 
 In this BioHackathon, we aimed to integrate Europe PMC and bio.tools by building tooling for exploring mentions, co-mentions and co-citations in the literature, training and refining machine learning model to recognize software mentions using the semantic software annotations in bio.tools.
 
@@ -122,8 +118,6 @@ To illustrate the challenges of matching Europe PMC article with bio.tools entie
 Software synonyms is also an issue. This is currently not addressed in bio.tools. However, SciCrunch do list synonyms for some software, e.g. "Mascot Server" being a synonym for "Mascot" (RRID:SCR_014322), Scikit-learn and scikits.learn for Sklearn (RRID:SCR_019053).
 
 As expected, we find many mentions of "comet" and "mascot" not referring to the software for peptide-spectrum matching. We also find instances of software being cited but not mentioned, e.g. the Comet paper is cited in [@PMID30702898] in a sentence "Application of these PSM algorithms (e.g., SEQUEST, X!Tandem)[@PMID24226387][@PMID23148064][@PMID14558131] have been successfully applied to metaproteomic analyses, despite the fact that they were never designed to deal with the complexity of metaproteomic data sets". Searching the name of the software together with some EDAM Topics, such as "Proteomics" helps find specific mentions with or without citation. If searching all literature, a large fraction of the mention-without-citation cases derive from non-open access papers, where the search is limited to titles and abstracts, but all citations are available.
-
-
 
 
 ### General Comparison
