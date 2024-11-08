@@ -99,7 +99,7 @@ TODO: EDAM and other metadata as distinguishing features to finding and describi
 In this BioHackathon, we aimed to integrate Europe PMC and bio.tools by building tooling for exploring mentions, co-mentions and co-citations in the literature, training and refining machine learning model to recognize software mentions using the semantic software annotations in bio.tools.
 
 
-## Results
+# Results
 
 ## bio.tools and the literature
 
