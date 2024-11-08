@@ -24,5 +24,17 @@ Veit - Clean up general stats and find some interesting cases, co-writing
 
 Have first versions of all of the above before the end of November (Aleks, Ana, Magnus and Veit will meet December 2 in Odense)
 
+# Future tasks
+
+- Finalize BioHackrXiv paper
+
+- Integrate ML results into pipeline for stats and co-mentioning graphs
+
+- Make networks openly (interactively) available?
+
+- Create comprehensive diagram of the conceptional background: what are tools, what type of connections, how is the entire thing organized and developed?
+
+- Two different networks: a) co-mentioned tools (through other papers), b) which tools mentions/cites which other tool
+
 
 
