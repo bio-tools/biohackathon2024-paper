@@ -109,6 +109,8 @@ For example, there are currently four distinct tools named "comet" with differen
 
 To illustrate the challenges of matching Europe PMC article with bio.tools enties, we selected 3 commonly used mass-spectrometry proteomics tools with large numbers of citations in the literature: Comet[@PMID23148064], Mascot[@PMID10612281] and MaxQuant[@PMID19029910]. Figure X illustrates the number of IDs (pmids) identified for the search terms indicated and the overlap between the sets of IDs retrieved.
 
+
+
 [Need to reformat / resize these images. Also may not want all of them?] At least Comet, and maybe at least one other, more complex, example?
 
 ![Alt text](maxquant_venn.png)
