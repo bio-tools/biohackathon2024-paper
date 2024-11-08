@@ -21,6 +21,20 @@ Magnus - Discussion and Conclusion (first draft, for input by everyone)
 Veit - Clean up general stats and find some interesting cases, co-writing
 
 
+# Future tasks
+
+- Finalize BioHackrXiv paper
+
+- Integrate ML results into pipeline for stats and co-mentioning graphs
+
+- Make networks openly (interactively) available?
+
+- Create comprehensive diagram of the conceptional background: what are tools, what type of connections, how is the entire thing organized and developed?
+
+- Two different networks: a) co-mentioned tools (through other papers), b) which tools mentions/cites which other tool
+
+- 
+
 
 
 
