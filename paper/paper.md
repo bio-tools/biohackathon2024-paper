@@ -140,6 +140,10 @@ We used the Europe PMC API to query both for citations and mentioned software to
 Including the EDAM topics of a software tool considerable decreased the number of unrelated publications for software names similar or equal to 
 widely used words, such as "comet", "Claudio" and "FUJI".
 
+
+
+In general, capitalizaton should not be relied upon [@GOOD REF]. Indeed, our Comet example was referred to as "COMET" by the developers themselves in the first publication mentioning it [@PMID16729052].
+
 ### Subsection level 3
 
 Please keep sections to a maximum of three levels.
