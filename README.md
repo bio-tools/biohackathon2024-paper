@@ -10,12 +10,17 @@ Rob - Venn diagrams for mentions of comet, mascot and maxquant, in OA and non-OA
 
 Tess - methods and results from the machine learning (with input from others involved)
 
-Aleks - co-mention and co-citation matrices, network construction with igraph?
+Aleks - co-mention and co-citation matrices, network construction with igraph? Interested in making this a paper of your PhD?
 
 Ana - Cytoscape visualization with py4cytoscape - explore possibilities to make an interactive visualization with Cytoscape.js or put a network up on NDEx, silimar to the Bioregistry network?
 
 Vedran - Jupyter notebooks, GitHub repositories and data repositories
 
 Magnus - Discussion and Conclusion (first draft, for input by everyone)
+
+Veit - Clean up general stats and find some interesting cases, co-writing
+
+
+
 
 
