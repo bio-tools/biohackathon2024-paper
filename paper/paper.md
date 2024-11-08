@@ -96,6 +96,10 @@ bio.tools [@PMID31405382] is a comprehensive registry of bioinformatics tools an
 
 TODO: EDAM and other metadata as distinguishing features to finding and describing software.
 
+In this BioHackathon, we aimed to integrate Europe PMC and bio.tools by building tooling for exploring mentions, co-mentions and co-citations in the literature, training and refining machine learning model to recognize software mentions using the semantic software annotations in bio.tools.
+
+
+## Results
 
 ## bio.tools and the literature
 
@@ -120,7 +124,7 @@ Software synonyms is also an issue. This is currently not addressed in bio.tools
 As expected, we find many mentions of "comet" and "mascot" not referring to the software for peptide-spectrum matching. We also find instances of software being cited but not mentioned, e.g. the Comet paper is cited in [@PMID30702898] in a sentence "Application of these PSM algorithms (e.g., SEQUEST, X!Tandem)[@PMID24226387][@PMID23148064][@PMID14558131] have been successfully applied to metaproteomic analyses, despite the fact that they were never designed to deal with the complexity of metaproteomic data sets". Searching the name of the software together with some EDAM Topics, such as "Proteomics" helps find specific mentions with or without citation. If searching all literature, a large fraction of the mention-without-citation cases derive from non-open access papers, where the search is limited to titles and abstracts, but all citations are available.
 
 
-## Results
+
 
 ### General Comparison
 
