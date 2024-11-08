@@ -112,7 +112,7 @@ To illustrate the challenges of matching Europe PMC article with bio.tools entie
 Examples with Venn diagrams?:
   comet, comet+proteomics, comet+epigenetics, comet-metagenomics (homonyms and common word)
   mascot, mascot+proteomics, "mascot server", "mascot server"+proteomics (synonyms and common word)
-  maxquant, maxquant+proteomics (no homonyms or synonyms and common word)
+  maxquant, maxquant+proteomics (no homonyms or synonyms and not a common word)
 
 Do each in all literature, and then again in open access literature only (or not-OA and OA literature for more contrast?)
 
