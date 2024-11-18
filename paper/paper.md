@@ -138,7 +138,11 @@ We used the Europe PMC API to query both for citations and mentioned software to
   - B: Keyword search of the entire literature corpus: `"SOFTWARE NAME" AND (EDAM_TOPIC1 OR EDAM_TOPIC2 OR ...)`
 
 Including the EDAM topics of a software tool considerable decreased the number of unrelated publications for software names similar or equal to 
-widely used words, such as "comet", "Claudio" and "FUJI".
+widely used words, such as "comet", "Claudio" and "FUJI", but still lead to a considerable overestimation of the number of mentioning papers in several case. This can be seen in the histogram summarizing the numbers for mentioning papers per software tool (Fig. comentions).
+
+
+![comentions](MentionesPerToolHist.png)
+Figure comentions: The number of publications that mention a software tool from bio.tools, including the name and one of the given EDAM topics. The number of mentioning papers was limited to a maximum of 5000. The x-axis is shown on logarithmic scale to allow seeing a wider range.
 
 
 
