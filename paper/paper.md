@@ -120,7 +120,7 @@ Do each in all literature, and then again in open access literature only (or not
 Figure 1. Venn diagram of articles matching MaxQuant and Proteomics in Europe PMC when searched on 2025-02-12. "MaxQuant" is a fairly unique software name, without homonyms or synonyms (other than perhaps the abbreviation "MQ").
 
 ![Venn diagram of articles matching Mascot Mascot Server and Proteomics in Europe PMC](Mascot_Mascot_Server_and_Proteomics.png)
-Figure 2. Venn diagram of articles matching Mascot Mascot Server and Proteomics in Europe PMC when searched on 2025-02-12.
+Figure 2. Venn diagram of articles matching Mascot Mascot Server and Proteomics in Europe PMC when searched on 2025-02-12. "Mascot" is a synonym for "Mascot Server", and also listed as such in bio.tools, however, "mascot " is also a fairly common word.
 
 ![Venn diagram of articles matching Comet, proteomics and metagenomics in Europe PMC](Comet_Proteomics_and_Metagenomics.png)
 Figure 3. Venn diagram of articles matching Comet, proteomics and metagenomics in Europe PMC when searched on 2025-02-12.
