@@ -117,13 +117,16 @@ Examples with Venn diagrams?:
 Do each in all literature, and then again in open access literature only (or not-OA and OA literature for more contrast?)
 
 ![Venn diagram of articles matching MaxQuant and Proteomics in Europe PMC](MaxQuant_and_Proteomics.png)
+
 Figure 1. Venn diagram of articles matching MaxQuant and Proteomics in Europe PMC when searched on 2025-02-12. "MaxQuant" is a fairly unique software name, without homonyms or synonyms (other than perhaps the abbreviation "MQ").
 
 ![Venn diagram of articles matching Mascot Mascot Server and Proteomics in Europe PMC](Mascot_Mascot_Server_and_Proteomics.png)
+
 Figure 2. Venn diagram of articles matching Mascot Mascot Server and Proteomics in Europe PMC when searched on 2025-02-12. "Mascot" is a synonym for "Mascot Server", and also listed as such in bio.tools, however, "mascot " is also a fairly common word.
 
 ![Venn diagram of articles matching Comet, proteomics and metagenomics in Europe PMC](Comet_Proteomics_and_Metagenomics.png)
-Figure 3. Venn diagram of articles matching Comet, proteomics and metagenomics in Europe PMC when searched on 2025-02-12.
+
+Figure 3. Venn diagram of articles matching Comet, proteomics and metagenomics in Europe PMC when searched on 2025-02-12. This is a particularly challenging case, as "comet" has three software homonyms, and is a common word.
 
 
 Software synonyms is also an issue. This is currently not addressed in bio.tools. However, SciCrunch do list synonyms for some software, e.g. "Mascot Server" being a synonym for "Mascot" (RRID:SCR_014322), Scikit-learn and scikits.learn for Sklearn (RRID:SCR_019053).
