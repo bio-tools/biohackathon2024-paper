@@ -109,10 +109,7 @@ For example, there are currently four distinct tools named "comet" with differen
 
 To illustrate the challenges of matching Europe PMC article with bio.tools enties, we selected 3 commonly used mass-spectrometry proteomics tools with large numbers of citations in the literature: MaxQuant[@PMID19029910], Comet[@PMID23148064] and Mascot[@PMID10612281]. Figures 1-3 illustrates the numbers of PubMed identifiers (IDs) retrieved for the respective search terms and their overlaps.
 
-Examples with Venn diagrams?:
-  comet, comet+proteomics, comet+epigenetics, comet-metagenomics (homonyms and common word)
-  mascot, mascot+proteomics, "mascot server", "mascot server"+proteomics (synonyms and common word)
-  maxquant, maxquant+proteomics (no homonyms or synonyms and not a common word)
+
 
 Do each in all literature, and then again in open access literature only (or not-OA and OA literature for more contrast?)
 
@@ -124,7 +121,7 @@ Figure 1. Venn diagram of articles matching MaxQuant and Proteomics in Europe PM
 
 Figure 2. Venn diagram of articles matching Mascot Mascot Server and Proteomics in Europe PMC when searched on 2025-02-12. "Mascot" is a synonym for "Mascot Server", and also listed as such in bio.tools, however, "mascot " is also a fairly common word.
 
-![Venn diagram of articles matching Comet, proteomics and metagenomics in Europe PMC](Comet_Proteomics_and_Metagenomics.png width="200" height="200")
+![Venn diagram of articles matching Comet, proteomics and metagenomics in Europe PMC](Comet_Proteomics_and_Metagenomics.png)
 
 Figure 3. Venn diagram of articles matching Comet, proteomics and metagenomics in Europe PMC when searched on 2025-02-12. This is a particularly challenging case, as "comet" has three software homonyms, and is a common word.
 
