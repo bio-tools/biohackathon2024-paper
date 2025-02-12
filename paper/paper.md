@@ -107,7 +107,7 @@ There are at least three distinct types of relationships between software tools 
 
 For example, there are currently four distinct tools named "comet" with different capitalization: Comet [@PMID23148064], coMET [@PMID25928765], CoMet [@PMID21622656] and COMET [@PMID32034124]. The first is a tool used in proteomics to match tandem mass spectra to peptides. The other three are primarily used in genetics, metagenomics and epigenetics, respectivly. Since it cannot be assumed that capitalization is consistent, disambiguating homonyms such as these in the scientific literature is a non-trivial task, but necessary for accurate mining of tool mentions and extracting information on the (co-)usage of software tools. However, the software metadata and semantic annotations in bio.tools opens several possible paths to improving disambiguation. Most tools are associated with one or more topics, Comet with Proteomics, coMET with Epigenomics and Methylated DNA immunoprecipitation, CoMet with Metagenomics and Microbial ecology, and COMET with Transcription factors and regulatory sites, Gene transcripts and Epigenetics. Topics could in theory be mapped to journals. Furthermore, most tools are associated with at least one publication describing the creation, deposition and usage of the tool. These publications, or at least their titles and abstracts, could be used as reference points for the tools. If a pubication is textually more similar to the primary CoMet publication [@PMID21622656] than the primary COMET publication [@PMID32034124], mentions of "comet", ignoring capitalization, is _ceteris paribus_ more likely to be about CoMet.
 
-To illustrate the challenges of matching Europe PMC article with bio.tools enties, we selected 3 commonly used mass-spectrometry proteomics tools with large numbers of citations in the literature: Comet[@PMID23148064], Mascot[@PMID10612281] and MaxQuant[@PMID19029910]. Figure X illustrates the number of IDs (pmids) identified for the search terms indicated and the overlap between the sets of IDs retrieved.
+To illustrate the challenges of matching Europe PMC article with bio.tools enties, we selected 3 commonly used mass-spectrometry proteomics tools with large numbers of citations in the literature: MaxQuant[@PMID19029910], Comet[@PMID23148064] and Mascot[@PMID10612281]. Figures 1-3 illustrates the numbers of PubMed identifiers (IDs) retrieved for the respective search terms and their overlaps.
 
 Examples with Venn diagrams?:
   comet, comet+proteomics, comet+epigenetics, comet-metagenomics (homonyms and common word)
@@ -116,13 +116,14 @@ Examples with Venn diagrams?:
 
 Do each in all literature, and then again in open access literature only (or not-OA and OA literature for more contrast?)
 
-Render with Venny, export to PDF or SVG. Change font if needed and arrange in a 2 x 3 or 3 x 2 panel figure.
-
-[Need to reformat / resize these images. Also may not want all of them?] At least Comet, and maybe at least one other, more complex, example?
-
 ![Venn diagram of articles matching MaxQuant and Proteomics in Europe PMC](MaxQuant_and_Proteomics.png)
+Figure 1. Venn diagram of articles matching MaxQuant and Proteomics in Europe PMC when searched on 2025-02-12. "MaxQuant" is a fairly unique software name, without homonyms or synonyms (other than perhaps the abbreviation "MQ").
+
 ![Venn diagram of articles matching Mascot Mascot Server and Proteomics in Europe PMC](Mascot_Mascot_Server_and_Proteomics.png)
+Figure 2. Venn diagram of articles matching Mascot Mascot Server and Proteomics in Europe PMC when searched on 2025-02-12.
+
 ![Venn diagram of articles matching Comet, proteomics and metagenomics in Europe PMC](Comet_Proteomics_and_Metagenomics.png)
+Figure 3. Venn diagram of articles matching Comet, proteomics and metagenomics in Europe PMC when searched on 2025-02-12.
 
 
 Software synonyms is also an issue. This is currently not addressed in bio.tools. However, SciCrunch do list synonyms for some software, e.g. "Mascot Server" being a synonym for "Mascot" (RRID:SCR_014322), Scikit-learn and scikits.learn for Sklearn (RRID:SCR_019053).
