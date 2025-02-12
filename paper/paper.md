@@ -120,9 +120,10 @@ Render with Venny, export to PDF or SVG. Change font if needed and arrange in a 
 
 [Need to reformat / resize these images. Also may not want all of them?] At least Comet, and maybe at least one other, more complex, example?
 
-![Alt text](maxquant_venn.png)
-![Alt text](mascot_venn.png)
-![Alt text](comet_venn.png)
+![Venn diagram of articles matching MaxQuant and Proteomics in Europe PMC](MaxQuant_and_Proteomics.png)
+![Venn diagram of articles matching Mascot Mascot Server and Proteomics in Europe PMC](Mascot_Mascot_Server_and_Proteomics.png)
+![Venn diagram of articles matching Comet, proteomics and metagenomics in Europe PMC](Comet_Proteomics_and_Metagenomics.png)
+
 
 Software synonyms is also an issue. This is currently not addressed in bio.tools. However, SciCrunch do list synonyms for some software, e.g. "Mascot Server" being a synonym for "Mascot" (RRID:SCR_014322), Scikit-learn and scikits.learn for Sklearn (RRID:SCR_019053).
 
