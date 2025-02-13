@@ -121,6 +121,10 @@ Figure 1. Venn diagram of articles matching MaxQuant and Proteomics in Europe PM
 
 Figure 2. Venn diagram of articles matching Mascot Mascot Server and Proteomics in Europe PMC when searched on 2025-02-12. "Mascot" is a synonym for "Mascot Server", and also listed as such in bio.tools, however, "mascot " is also a fairly common word.
 
+<img src="Comet_Proteomics_and_Metagenomics.png" alt="Venn diagram of articles matching Comet, proteomics and metagenomics in Europe PMC" width="200"/>
+
+<img src="Comet_Proteomics_and_Metagenomics.png" alt="Venn diagram of articles matching Comet, proteomics and metagenomics in Europe PMC" width="300"/>
+
 ![Venn diagram of articles matching Comet, proteomics and metagenomics in Europe PMC](Comet_Proteomics_and_Metagenomics.png)
 
 Figure 3. Venn diagram of articles matching Comet, proteomics and metagenomics in Europe PMC when searched on 2025-02-12. This is a particularly challenging case, as "comet" has three software homonyms, and is a common word.
