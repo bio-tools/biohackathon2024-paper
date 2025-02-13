@@ -109,11 +109,11 @@ For example, there are currently four distinct tools named "comet" with differen
 
 To illustrate the challenges of matching Europe PMC article with bio.tools enties, we selected 3 commonly used mass-spectrometry proteomics tools with large numbers of citations in the literature: MaxQuant[@PMID19029910], Comet[@PMID23148064] and Mascot[@PMID10612281]. Figures 1-3 illustrates the numbers of PubMed identifiers (IDs) retrieved for the respective search terms and their overlaps.
 
-![Venn diagram of articles matching MaxQuant and Proteomics in Europe PMC when searched on 2025-02-12. "MaxQuant" is a fairly unique software name, without homonyms or synonyms (other than perhaps the abbreviation "MQ").](MaxQuant_and_Proteomics.png)
+![Venn diagram of articles matching MaxQuant and Proteomics in Europe PMC when searched on 2025-02-13. "MaxQuant" is a fairly unique software name, without homonyms or synonyms (other than perhaps the abbreviation "MQ").](MaxQuant_and_Proteomics.png)
 
-![Venn diagram of articles matching Mascot Mascot Server and Proteomics in Europe PMC when searched on 2025-02-12. "Mascot" is a synonym for "Mascot Server", and also listed as such in bio.tools, however, "mascot " is also a fairly common word.](Mascot_Mascot_Server_and_Proteomics.png)
+![Venn diagram of articles matching Mascot Mascot Server and Proteomics in Europe PMC when searched on 2025-02-13. "Mascot" is a synonym for "Mascot Server", and also listed as such in bio.tools, however, "mascot " is also a fairly common word.](Mascot_Mascot_Server_and_Proteomics.png)
 
-![Venn diagram of articles matching Comet, proteomics and metagenomics in Europe PMC when searched on 2025-02-12. This is a particularly challenging case, as "comet" has three software homonyms, and is a common word.](Comet_Proteomics_and_Metagenomics.png)
+![Venn diagram of articles matching Comet, proteomics and metagenomics in Europe PMC when searched on 2025-02-13. This is a particularly challenging case, as "comet" has three software homonyms, and is a common word.](Comet_Proteomics_and_Metagenomics.png)
 
 Software synonyms is also an issue. This is currently not addressed in bio.tools. However, SciCrunch do list synonyms for some software, e.g. "Mascot Server" being a synonym for "Mascot" (RRID:SCR_014322), Scikit-learn and scikits.learn for Sklearn (RRID:SCR_019053).
 
