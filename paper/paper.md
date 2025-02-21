@@ -119,12 +119,6 @@ Software synonyms is also an issue. This is currently not addressed in bio.tools
 
 As expected, we find many mentions of "comet" and "mascot" not referring to the software for peptide-spectrum matching. We also find instances of software being cited but not mentioned, e.g. the Comet paper is cited in [@PMID30702898] in a sentence "Application of these PSM algorithms (e.g., SEQUEST, X!Tandem)[@PMID24226387][@PMID23148064][@PMID14558131] have been successfully applied to metaproteomic analyses, despite the fact that they were never designed to deal with the complexity of metaproteomic data sets". Searching the name of the software together with some EDAM Topics, such as "Proteomics" helps find specific mentions with or without citation. If searching all literature, a large fraction of the mention-without-citation cases derive from non-open access papers, where the search is limited to titles and abstracts, but all citations are available.
 
-## Machine Learning
-
-Transformer architectures have fundamentally transformed the field of natural language processing by excelling in contextual word understanding, primarily through the innovative use of self-attention mechanisms. This capability allows transformers to analyze and interpret the relationships between words in a sentence, enabling them to capture nuanced meanings. Using such a model, we aim to disentangle the ambiguity of whether a software name mentioned in a sentence refers to the software or a synonymous term, based on the surrounding context.
- 
-We retrieved open-source publications describing bio.tools entities using the Europe PMC API. For each of the 100 unique tools, we extracted 3 tool mentions using sentence boundary detection based on punctuation-aware regex splitting. We manually annotated 3,419 sentences to identify whether they mentioned the corresponding tool (boolean True) or an unrelated synonym (boolean False). We then split the dataset into training and test sets using an 80-20 ratio via the train_test_split function from Scikit-learn. We tokenised each sentence using the NLTK wordpunct tokenizer and employed the Inside-Outside-Beginning (IOB) tagging scheme, where we assigned "B-" (beginning) or "I-" (inside) labels to each entity based on its span while assigning all non-entity tokens the "O" (outside) label. We confirmed that each "I-" tag was preceded by a matching "B-" tag. The tokenised data was then used to train a case-aware biomedical corpus-pre-trained BERT model, Bioformer-16L, to distinguish between true and false tool mentions. For evaluation, we computed accuracy, precision, recall, and F1-score on the test set.
-
 ### General Comparison
 
 We used the Europe PMC API to query both for citations and mentioned software tools. For that we used the following approach:
@@ -141,8 +135,13 @@ widely used words, such as "comet", "Claudio" and "FUJI", but still lead to a co
 Figure comentions: The number of publications that mention a software tool from bio.tools, including the name and one of the given EDAM topics. The number of mentioning papers was limited to a maximum of 5000. The x-axis is shown on logarithmic scale to allow seeing a wider range.
 
 
-
 In general, capitalizaton should not be relied upon [@GOOD REF]. Indeed, our Comet example was referred to as "COMET" by the developers themselves in the first publication mentioning it [@PMID16729052].
+
+## Machine Learning
+
+Transformer architectures have fundamentally transformed the field of natural language processing by excelling in contextual word understanding, primarily through the innovative use of self-attention mechanisms. This capability allows transformers to analyze and interpret the relationships between words in a sentence, enabling them to capture nuanced meanings. Using such a model, we aim to disentangle the ambiguity of whether a software name mentioned in a sentence refers to the software or a synonymous term, based on the surrounding context.
+ 
+We retrieved open-source publications describing bio.tools entities using the Europe PMC API. For each of the 100 unique tools, we extracted 3 tool mentions using sentence boundary detection based on punctuation-aware regex splitting. We manually annotated 3,419 sentences to identify whether they mentioned the corresponding tool (boolean True) or an unrelated synonym (boolean False). We then split the dataset into training and test sets using an 80-20 ratio via the train_test_split function from Scikit-learn. We tokenised each sentence using the NLTK wordpunct tokenizer and employed the Inside-Outside-Beginning (IOB) tagging scheme, where we assigned "B-" (beginning) or "I-" (inside) labels to each entity based on its span while assigning all non-entity tokens the "O" (outside) label. We confirmed that each "I-" tag was preceded by a matching "B-" tag. The tokenised data was then used to train a case-aware biomedical corpus-pre-trained BERT family model, Bioformer-16L, to distinguish between true and false tool mentions. For evaluation, we computed accuracy, precision, recall, and F1-score on the test set.
 
 ### Subsection level 3
 
