@@ -111,7 +111,7 @@ To illustrate the challenges of matching Europe PMC article with bio.tools entie
 
 ![Venn diagram of articles matching MaxQuant and Proteomics in Europe PMC when searched on 2025-02-13. "MaxQuant" is a fairly unique software name, without homonyms or synonyms (other than perhaps the abbreviation "MQ").](MaxQuant_and_Proteomics.png)
 
-![Venn diagram of articles matching Mascot Mascot Server and Proteomics in Europe PMC when searched on 2025-02-13. "Mascot" is a synonym for "Mascot Server", and also listed as such in bio.tools, however, "mascot " is also a fairly common word.](Mascot_Mascot_Server_and_Proteomics.png)
+![Venn diagram of articles matching Mascot Mascot Server and Proteomics in Europe PMC when searched on 2025-02-13. "Mascot" is a synonym for "Mascot Server", and also listed as such in bio.tools, however, "mascot " is also a common word, which explains why a larger share of the matches to "Mascot" are outside "Proteomics" compared with "Mascot Server".](Mascot_Mascot_Server_and_Proteomics.png)
 
 ![Venn diagram of articles matching Comet, proteomics and metagenomics in Europe PMC when searched on 2025-02-13. This is a particularly challenging case, as "comet" has three software homonyms, and is a common word.](Comet_Proteomics_and_Metagenomics.png)
 
