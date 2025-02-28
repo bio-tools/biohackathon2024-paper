@@ -12,7 +12,7 @@ authors:
     orcid: 0009-0008-5170-0927
     affiliation: 1
   - name: Erik Jaaniso
-    orcid: 0000-0000-0000-0000
+    orcid: 0009-0003-4246-6546
     affiliation: 2
   - name: Magnus Palmblad
     orcid: 0000-0002-5865-8994
@@ -38,7 +38,7 @@ authors:
 affiliations:
  - name: University of Southern Denmark, Campusvej 55, 5230, Odense, Denmark
    index: 1
- - name: Institute of Computer Science, University of Tartu. J Liivi 2, Tartu, Estonia
+ - name: Institute of Computer Science, University of Tartu, Narva mnt 18, 51009 Tartu, Estonia
    index: 2
  - name: Leiden University Medical Center, Albinusdreef 2, 2333 ZA, Leiden, The Netherlands
    index: 3
@@ -142,6 +142,18 @@ In general, capitalizaton should not be relied upon [@GOOD REF]. Indeed, our Com
 Transformer architectures have fundamentally transformed the field of natural language processing by excelling in contextual word understanding, primarily through the innovative use of self-attention mechanisms. This capability allows transformers to analyze and interpret the relationships between words in a sentence, enabling them to capture nuanced meanings. Using such a model, we aim to disentangle the ambiguity of whether a software name mentioned in a sentence refers to the software or a synonymous term, based on the surrounding context.
  
 We retrieved open-source publications describing bio.tools entities using the Europe PMC API. For each of the 100 unique tools, we extracted 3 tool mentions using sentence boundary detection based on punctuation-aware regex splitting. We manually annotated 3,419 sentences to identify whether they mentioned the corresponding tool (boolean True) or an unrelated synonym (boolean False). We then split the dataset into training and test sets using an 80-20 ratio via the train_test_split function from Scikit-learn. We tokenised each sentence using the NLTK wordpunct tokenizer and employed the Inside-Outside-Beginning (IOB) tagging scheme, where we assigned "B-" (beginning) or "I-" (inside) labels to each entity based on its span while assigning all non-entity tokens the "O" (outside) label. We confirmed that each "I-" tag was preceded by a matching "B-" tag. The tokenised data was then used to train a case-aware biomedical corpus-pre-trained BERT family model, Bioformer-16L, to distinguish between true and false tool mentions. For evaluation, we computed accuracy, precision, recall, and F1-score on the test set.
+
+
+## A hand-crafted approach
+
+The automated extraction of software mentions from scholarly publications has recently attracted significant attention. Several research groups have developed approaches based on Named Entity Recognition (NER) models trained on curated datasets of software mentions (Istrate et al. [@istrate2022largedatasetsoftwarementions], Schindler et al. [@PMID35111920], Lopez et al. [@10.1145/3459637.3481936]. These efforts often extend beyond simple mention extraction to include disambiguation of different textual representations of the same software and, in some cases, entity linking to external knowledge bases or software repositories. While reported F1-scores for software name extraction on their respective training/test datasets appear promising (Istrate et al.: F1 = 0.92 on Softcite; Schindler et al.: F1 = 0.88 on SOMESCI; Lopez et al.: F1 = 0.71 on Softcite), these metrics may not fully reflect performance "in the wild" on uncurated, full-text corpora.
+
+Istrate et al. provide a more realistic assessment by manually curating the top 1,000 and top 10,000 most frequent software mentions extracted from the PMC Open Access (PMC-OA) commercial subset. They report precisions of 79.5% and 69.66%, respectively, for these curated samples, indicating a substantial drop in performance when moving beyond curated data. Further analysis by Druskat et al. [@druskat2024dontmentionitapproach] of a small random sample from the Istrate et al. dataset found that only 77% of extracted mentions were correctly identified as software. Moreover, among mentions with associated repository links, 65.4% pointed to the incorrect software. These findings from state-of-the-art models highlight the inherent difficulty of accurately and reliably extracting software mentions, a challenge compounded by the inconsistent and often ambiguous ways in which software is referenced in scientific literature. This ambiguity is further reflected in the moderate inter-annotator agreement observed even among expert curators when categorizing software mentions, a point underscored by Istrate et al.'s evaluation of their top 1,000 and 10,000 extracted mentions.
+
+In contrast to these general-purpose software extraction approaches, our task benefits from specific constraints that potentially simplify the problem. We focus exclusively on software entities present in the bio.tools registry. This fixed vocabulary, combined with the rich metadata available in bio.tools entries (including associated publications and homepages), allows us to explore a complementary approach. Instead of relying solely on NER, we can initially investigate a "reverse" strategy: leveraging the known software names and associated information from bio.tools to perform simple string matching against the target articles. We can then iteratively improve the process using hand-crafted rules to remove false positives and resolve matching conflicts.
+
+TODO
+
 
 ### Subsection level 3
 
