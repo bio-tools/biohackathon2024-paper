@@ -62,13 +62,9 @@ event: BioHackathon Europe 2024
 
 ## Software mentions in the scientific literature
 
-The mining and study of mentions of software in the scientific literature has recenntly received much attention.
+The mining and study of mentions of software in the scientific literature has recently received much attention. While specialized tools leveraging machine learning and deep-learning models exist, human curation of algorithmic outputs remains often unavoidable. There is still room for improvement in these models to ideally reduce the manual effort required for refining results. Integrating state-of-the-art NLP/NER tools into the curators' workflow is one approach to addressing this challenge. However, it is important to recognize the limitations of such tools and not overlook the necessity of manual work, which can be demanding. Apicuron [PMID338821209] is an initiative aimed at acknowledging biocurators who handle information extracted from publications by verifying, standardizing, and integrating it into dedicated databases. The initiative seeks to keep biocurators motivated and promote their visibility.
 
-Mention Apicuron?
-
-Erik - would you like to expand on this background?
-
-The Chan Zuckerberg Initiative (CZI) has produced a software mentions dataset, CZ Software Mentions [@istrate2022largedatasetsoftwarementions], where the mentions were extracted with a trained SciBERT model from several sources: the NIH PubMed Central collection and from papers provided by various publishers to the Chan Zuckerberg Initiative.
+There exists number of approaches to tackling the problem of software mentions in the scientific literature. The Chan Zuckerberg Initiative (CZI) has produced a software mentions dataset, CZ Software Mentions [@istrate2022largedatasetsoftwarementions], where the mentions were extracted with a trained SciBERT model from several sources: the NIH PubMed Central collection and from papers provided by various publishers to the Chan Zuckerberg Initiative.
 
 Schindler et al. [@PMID35111920] constructed a knowledge graph from software mentions in the scientific literature, differenting different types of software, such as applications, plugins, or operating systems, and types of mention, including usage, creation and deposition. The bio.tools corpus built primarily from primary publications would be expected to cover all types of mention, including describing the creation and availability (deposition) of the tool, as well as some use cases (usage).
 
@@ -77,7 +73,7 @@ OpenEBench is providing technical and scientific benchmarks to assess software u
 
 Even larger efforts, such as the domain-agnostic OpenAIRE project [@REF] maintains a knowledge graph of research outcomes, including metadata records about research publications and software.
 
-SciCrunch...
+[SciCrunch](https://www.scicrunch.com/) is a collaboratively edited knowledge base of scientific resources, designed to serve as a common data source for the research community. It provides information on Research Resource Identifiers (RRIDs), which can be used in scientific publications. SciScore is an automated tool developed to assist expert reviewers by identifying and extracting structured information scattered across a paper. Additionally, SciScore verifies the presence and accuracy of RRIDs in manuscripts, detects sentences that may be missing RRIDs, and, in some cases, can even suggest appropriate RRIDs. 
 
 Disambiguation (if anyone looked at this?)
 
@@ -136,6 +132,16 @@ Figure comentions: The number of publications that mention a software tool from 
 
 
 In general, capitalizaton should not be relied upon [@GOOD REF]. Indeed, our Comet example was referred to as "COMET" by the developers themselves in the first publication mentioning it [@PMID16729052].
+
+## Networks of co-mentions and co-citations
+
+Building workflows that integrate various tools is an essential part of bioinformatics. Extracting knowledge from the literature about software tools used together could help identify compatible tools or explore better alternatives (e.g., if multiple tools are mentioned together in a benchmark study). This challenge can be approached by searching for software tools cited together in the same publications. However, many bioinformatics tools have become so well-known (like BLAST) that researchers often mention them without citing them [PMID23768135]. This makes it crucial to have tools that can accurately detect mentions of software tools in scientific literature.
+
+To visualize the networks of co-cited and co-mentioned tools, we generated adjacency matrices based on the results of EUROPEPMC. For co-citation networks, for instance, we retrieved citation data for 9,453 tools by querying the citations of primary publication associated with each tool, resulting in 366,828 publications in total. We then constructed a binary matrix, where 1 indicated that a tool’s primary publication was cited in a given article. From this, we derived an adjacency matrix representing the number of articles that cited pairs of tools. The resulting symmetric matrix served as the foundation for graph generation.
+
+Since this process resulted in a very dense matrix, we applied additional filtering to refine the data. First, we removed edges between tools with the same name, as these often represented updated versions of the same software, making such connections less relevant. Additionally, we pruned edges between tools that shared the same primary publication, as this typically indicated multiple software tools originating from the same study. Furthermore, we applied a filtering threshold based on edge weight, keeping only connections where the number of shared publications was at least 50. This reduced the number of edges by approximately three orders of magnitude, making the network more meaningful and easier to interpret.
+
+Using the py4cytoscape library, we generated network files compatible with the Cytoscape JavaScript library. We then developed a simple app that enables users to explore relationships between different software tools. A demo of the co-citation network can be viewed here: [Co-citation network](https://alszmigiel.github.io/biohackathon2024-jscytoscape/).
 
 ## Machine Learning
 
