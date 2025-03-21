@@ -229,7 +229,8 @@ All developed software is available through https://github.com/bio-tools/biohack
 * And remember, software and data need a license for them to be used by others, no license means no clear rules so nobody could legally use a non-licensed research object, whatever that object is
 
 # Acknowledgements
-Please always remember to acknowledge the BioHackathon, CodeFest, VoCamp, Sprint or similar where this work was (partially) developed.
+We acknowledge the very vivid and inviting environment of the Biohackathon and the ELIXIR team for their splendid organization and partial funding. This format allowed to exchange with experts in the different fields which were very fruitful to this work. 
+
 
 # References
 
