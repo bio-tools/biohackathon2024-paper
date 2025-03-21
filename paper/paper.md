@@ -23,7 +23,7 @@ authors:
   - name: Santosh Tirunagari
     orcid: 
     affiliation: 5
-  - name: Tess Afanasyeva
+  - name: Tess AV Afanasyeva
     orcid: 0000-0003-3962-0779
     affiliation: 6
   - name: Vedran Kasalica
@@ -229,7 +229,7 @@ All developed software is available through https://github.com/bio-tools/biohack
 * And remember, software and data need a license for them to be used by others, no license means no clear rules so nobody could legally use a non-licensed research object, whatever that object is
 
 # Acknowledgements
-We acknowledge the very vivid and inviting environment of the Biohackathon and the ELIXIR team for their splendid organization and partial funding. This format allowed to exchange with experts in the different fields which were very fruitful to this work. 
+We acknowledge the very vivid and inviting environment of the Biohackathon and the ELIXIR team for their splendid organization and partial funding. This format allowed to exchange with experts in the different fields which were very fruitful to this work. TAVA acknowledges travel support by Sanguin Research.
 
 
 # References
