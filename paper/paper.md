@@ -200,33 +200,11 @@ Despite these iterative refinements, our hand-crafted methodology still exhibits
 Currently, final results are not output in a form suitable for the Europe PMC Annotations API. Instead, the program retrieves full-text XML for a given PMC ID from Europe PMC, transforms it to a simple HTML representation via XSLT, and carefully searches for and highlights the matches within the HTML to facilitate visual manual inspection of the results. This could help validate the machine learning approach, but future developments could also explore hybrid approaches that integrate insights from this hand-crafted methodology – particularly regarding bio.tools linking – as manual enhancements to machine learning-based results, or alternatively, leverage trained NER models as an additional input layer to the rule-based approach.
 
 
-### Subsection level 3
-
-Please keep sections to a maximum of three levels.
-
-## Tables, figures and so on
-
-Please remember to introduce tables (see Table 1) before they appear on the document. We recommend to center tables, formulas and figure but not the corresponding captions. Feel free to modify the table style as it better suits to your data.
-
-Table 1
-| Header 1 | Header 2 |
-| -------- | -------- |
-| item 1 | item 2 |
-| item 3 | item 4 |
-
 Remember to introduce figures (see Figure 1) before they appear on the document. 
 
-![BioHackrXiv logo](./biohackrxiv.png)
- 
-Figure 1. A figure corresponding to the logo of our BioHackrXiv preprint.
-
-# Other main section on your manuscript level 1
-
-Feel free to use numbered lists or bullet points as you need.
-* Item 1
-* Item 2
-
 # Discussion and/or Conclusion
+
+
 
 We recommend to include some discussion or conclusion about your work. Feel free to modify the section title as it fits better to your manuscript.
 
