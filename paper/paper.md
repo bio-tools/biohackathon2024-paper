@@ -204,17 +204,25 @@ Remember to introduce figures (see Figure 1) before they appear on the document.
 
 # Discussion and/or Conclusion
 
+We studied software mentions in the literature using multiple approaches ranging from more manual approaches to advanced literature mining. We found that software names, similar to general challenges in text mining, can lead to considerable challenges in finding the correct mentioning. In addition, this can be further be complicated by different software tools having the same name, such as the four tools with the name _comet_.
+
+TODO:
+- insights from literature mining
+- co-mentions vs co-citations
 
 
-We recommend to include some discussion or conclusion about your work. Feel free to modify the section title as it fits better to your manuscript.
 
 # Future work
 
-And maybe you want to add a sentence or two on how you plan to continue. Please keep reading to learn about citations and references.
+TODO:
+- Deeper investiation of networks
+- Working on including software mentions into EuropePMC
+- Build results, at least to some extent, into bio.tools?
 
-For citations of references, we prefer the use of parenthesis, last name and year. If you use a citation manager, Elsevier – Harvard or American Psychological Association (APA) will work. If you are referencing web pages, software or so, please do so in the same way. Whenever possible, add authors and year. We have included a couple of citations along this document for you to get the idea. Please remember to always add DOI whenever available, if not possible, please provide alternative URLs. You will end up with an alphabetical order list by authors’ last name.
 
 # Jupyter notebooks, GitHub repositories and data repositories
+
+All developed software is available through https://github.com/bio-tools/biohackathon2024
 
 * Please add a list here
 * Make sure you let us know which of these correspond to Jupyter notebooks. Although not supported yet, we plan to add features for them
