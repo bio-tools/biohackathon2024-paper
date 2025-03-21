@@ -119,11 +119,9 @@ We used the Europe PMC API to query both for citations and mentioned software to
   - A: Citations of given publication of a tool
   - B: Keyword search of the entire literature corpus: `"SOFTWARE NAME" AND (EDAM_TOPIC1 OR EDAM_TOPIC2 OR ...)`
 
-Including the EDAM topics of a software tool considerable decreased the number of unrelated publications for software names similar or equal to 
-widely used words, such as "comet", "Claudio" and "FUJI", but still lead to a considerable overestimation of the number of mentioning papers in several case. This can be seen in the histogram summarizing the numbers for mentioning papers per software tool (Fig. comentions).
+Including the EDAM topics of a software tool considerable decreased the number of unrelated publications for software names similar or equal to widely used words, such as "comet", "Claudio" and "FUJI", but still lead to a considerable overestimation of the number of mentioning papers in several case. This can be seen in the histogram summarizing the numbers for mentioning papers per software tool (Figure 4).
 
-![comentions](MentionsPerToolHist.png)
-Figure comentions: The number of publications that mention a software tool from bio.tools, including the name and one of the given EDAM topics. The number of mentioning papers was limited to a maximum of 5000. The x-axis is shown on logarithmic scale to allow seeing a wider range.
+![The number of publications that mention a software tool from bio.tools, including the name and one of the given EDAM topics. The number of mentioning papers was limited to a maximum of 5000. The x-axis is shown on logarithmic scale to allow seeing a wider range.](MentionsPerToolHist.png)
 
 
 In general, capitalizaton should not be relied upon [@Bodapati]. Indeed, our Comet example was referred to as "COMET" by the developers themselves in the first publication mentioning it [@PMID16729052].
@@ -144,7 +142,7 @@ Transformer architectures have fundamentally transformed the field of natural l
  
 We retrieved open-source publications describing bio.tools entities using the Europe PMC API. For each of the 100 unique tools, we extracted 3 tool mentions using sentence boundary detection based on punctuation-aware regex splitting. We manually annotated 3,419 sentences to identify whether they mentioned the corresponding tool (boolean True) or an unrelated synonym (boolean False). We then split the dataset into training and test sets using an 80-20 ratio via the train_test_split function from Scikit-learn. We tokenised each sentence using the NLTK wordpunct tokenizer and employed the Inside-Outside-Beginning (IOB) tagging scheme, where we assigned "B-" (beginning) or "I-" (inside) labels to each entity based on its span while assigning all non-entity tokens the "O" (outside) label. We confirmed that each "I-" tag was preceded by a matching "B-" tag. The tokenised data was then used to train a case-aware biomedical corpus-pre-trained BERT family model, Bioformer-16L, to distinguish between true and false tool mentions. For evaluation, we computed accuracy, precision, recall, and F1-score on the test set. The highest achieved F1-score was 74.4%, with an accuracy of 97.1%,  precision of 68.9% and recall of 81.0%. While the accuracy achieved is sufficient to distinguish between Comet/COMET in the context of bio.tool entries ([@PMID23148064], [@PMID32034124]) and the larger, solar system score context [@PMID28554980](see Figure 1), more work is needed in the preparation of a larger training dataset to ensure the satisfactory low number of false positives.
 
-![Figure 1: Example of synonymous term disentanglement by trained Bioformer-16L.](Machine_learning_classification.png)
+![Example of synonymous term disentanglement by trained Bioformer-16L.](Machine_learning_classification.png)
 
 ## A hand-crafted approach
 
@@ -156,7 +154,7 @@ In contrast to these general-purpose software extraction approaches, our task be
 
 As an initial, simplified test, we implemented a case-sensitive string matching approach, comparing names from bio.tools directly against words within a target article. Figure 1 illustrates the results for a paragraph from publication PMC3257301 [@PMID22253597]. In this visualization, different matches are highlighted with distinct background colors and linked to their corresponding bio.tools entry. In the example, all matches are false positives. For instance, "enrichment" incorrectly matches a bio.tools entry about a Python library called "enrichment" providing two methods to perform enrichment analysis, when in the context of the article it refers to a general concept, and similarly "RNA" is erroneously linked to "A *randomized Numerical Aligner* for Accurate alignment of NGS reads" despite being used generically in the text.
 
-![Figure 2: Case-sensitively matching bio.tools names](PMC3257301_casesensitive_matches.png)
+![Case-sensitively matching bio.tools names](PMC3257301_casesensitive_matches.png)
 
 Recognizing that the case-sensitive approach misses valid matches (at least one tool is missed in the previous example), we broadened our matching criteria. In addition to case-sensitive matching, we also match case-insensitively. For case-sensitive matching, we remove symbols not permitted in bio.tools names, primarily punctuation. For case-insensitive matching, we retain only alphanumeric characters and additionally remove trailing numbers, anticipating that reference numbers are often inadvertently attached to preceding words. Beyond the full tool name from bio.tools, our broadened matching criteria also includes:
 
@@ -171,7 +169,7 @@ Recognizing that the case-sensitive approach misses valid matches (at least one 
 
 Matches based on the last two criteria (acronyms and individual words) are flagged for requiring further validation (URL or citation evidence, discussed later). Multi-word matching is enabled with a tolerance for one word compounding variation (e.g. "Single-cell", "single cell", and "singlecell" are considered equivalent in case-insensitive matching). Figure 2 shows the results after applying the full set of relaxed matching rules to the same paragraph from publication PMC3257301. While this increases recall (identifying at least one true positive missed by the case-sensitive matching), it also introduces further false positives, such as "Table" matching "TABLE", "targets" matching "TargetS", "the" matching "THEx", "or" matching "OR and DXR", and "to a" matching "TOA".
 
-![Figure 3: Loosely matching all bio.tools names](PMC3257301_all_matches.png)
+![Loosely matching all bio.tools names](PMC3257301_all_matches.png)
 
 To improve precision, we implemented a series of filtering rules. We first observed that valid tool names often adhere to certain naming conventions. We define "simple names" as "lowercase", "UPPERCASE", "Capital", "UPPERCASEs", "Capital2". Multi-word names are "simple" only if all words belong to the same simple category. Matches with names not conforming to these "simple name" categories are retained, as these more complex names are less likely to be common English words. Examples of retained "not simple names" include "MixedCase" and "Number4between". However, recognizing that some non-simple names can still lead to false positives due to common usage outside of software context, we curated a manual exclusion list for frequently occurring false positives (e.g. "t-SNE", "circRNA"). We acknowledge that this manual exclusion list, while practical, introduces a degree of bias, as it is inherently limited to the most prevalent false positives encountered during development.
 
@@ -191,14 +189,12 @@ In a final post-processing step, targeted removal of likely false positives is d
 
 The final matching results for the example paragraph from publication PMC3257301 are depicted in Figure 3. "pfam" (https://bio.tools/pfam) is now linked to the Pfam database, a match missed by the initial case-sensitive approach. However, the matches for "GO Term Finder" (https://bio.tools/go_term_finder) and "goTermMapper" (https://bio.tools/go_term_mapper) persist as interesting, but eventually incorrect matches. While the article refers to the Candida Genome Database implementation of "GO Term Finder", the linked entry in bio.tools is about a "Generic GO Term Finder" implementation. The URL provided in the article for "GO Term Finder" appears to be incorrect (it should actually be http://www.candidagenome.org/cgi-bin/GO/goTermFinder). This wrongly placed URL points to a "GO Slim Mapper" tool, which is not present in bio.tools, and is therefore correctly unmatched by our system (although the text "GO Slim Mapper" is present in the paragraph). The "goTermMapper" match itself, while incorrect, highlights an intended feature of our approach: matching tool names within URLs. This is done because in some cases, the tool name may only appear within the URL itself, and not in the surrounding text.
 
-![Figure 4: Final matching to bio.tools](PMC3257301_final_matches.png)
+![Final matching to bio.tools](PMC3257301_final_matches.png)
 
 Despite these iterative refinements, our hand-crafted methodology still exhibits inherent shortcomings. Biases remain towards non-simple names and tools that have formal publications. Short acronyms are harder to match, requiring publication or URL evidence, and acronyms in general pose difficulties due to their inherent ambiguity. The reliance on bio.tools entries introduces vulnerabilities to outdated information, and conversely, older articles may reference tools using outdated URLs. Misattributions to semantically related but distinct tools can occur, for instance "GO" incorrectly links to https://bio.tools/go_enrichment_tool due to that entry using a generic Gene Ontology publication. The lack of synonym support in bio.tools limits matching variations like "sklearn" to "scikit-learn". Fundamentally, the approach remains string-matching based, lacking true semantic comprehension or contextual awareness. The approach is also unaware of the tool mention span and is thus susceptible to spurious substring matches, such as matching a hypothetical bio.tools entry called "Slim Mapper" within "GO Slim Mapper".
 
 Currently, final results are not output in a form suitable for the Europe PMC Annotations API. Instead, the program retrieves full-text XML for a given PMC ID from Europe PMC, transforms it to a simple HTML representation via XSLT, and carefully searches for and highlights the matches within the HTML to facilitate visual manual inspection of the results. This could help validate the machine learning approach, but future developments could also explore hybrid approaches that integrate insights from this hand-crafted methodology – particularly regarding bio.tools linking – as manual enhancements to machine learning-based results, or alternatively, leverage trained NER models as an additional input layer to the rule-based approach.
 
-
-Remember to introduce figures (see Figure 1) before they appear on the document. 
 
 # Discussion and/or Conclusion
 
