@@ -71,7 +71,7 @@ Schindler et al. [@PMID35111920] constructed a knowledge graph from software men
 OpenEBench is providing technical and scientific benchmarks to assess software usage and popularity. However, like other approaches, it mostly bases on citations and thus might underestimate the impact of a software tool.
 
 
-Even larger efforts, such as the domain-agnostic OpenAIRE project [@REF] maintains a knowledge graph of research outcomes, including metadata records about research publications and software.
+Even larger efforts, such as the domain-agnostic OpenAIRE project [@OpenAIRE] maintains a knowledge graph of research outcomes, including metadata records about research publications and software.
 
 [SciCrunch](https://www.scicrunch.com/) is a collaboratively edited knowledge base of scientific resources, designed to serve as a common data source for the research community. It provides information on Research Resource Identifiers (RRIDs), which can be used in scientific publications. SciScore is an automated tool developed to assist expert reviewers by identifying and extracting structured information scattered across a paper. Additionally, SciScore verifies the presence and accuracy of RRIDs in manuscripts, detects sentences that may be missing RRIDs, and, in some cases, can even suggest appropriate RRIDs. 
 
@@ -128,7 +128,7 @@ widely used words, such as "comet", "Claudio" and "FUJI", but still lead to a co
 Figure comentions: The number of publications that mention a software tool from bio.tools, including the name and one of the given EDAM topics. The number of mentioning papers was limited to a maximum of 5000. The x-axis is shown on logarithmic scale to allow seeing a wider range.
 
 
-In general, capitalizaton should not be relied upon [@GOOD REF]. Indeed, our Comet example was referred to as "COMET" by the developers themselves in the first publication mentioning it [@PMID16729052].
+In general, capitalizaton should not be relied upon [@Bodapati]. Indeed, our Comet example was referred to as "COMET" by the developers themselves in the first publication mentioning it [@PMID16729052].
 
 ## Networks of co-mentions and co-citations
 
