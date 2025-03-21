@@ -93,7 +93,7 @@ In this BioHackathon, we aimed to integrate Europe PMC and bio.tools by building
 
 # Results
 
-## bio.tools and the literature
+## General Aspects
 
 There are at least three distinct types of relationships between software tools (entries) in bio.tools and articles:
 
@@ -115,8 +115,6 @@ Software synonyms is also an issue. This is currently not addressed in bio.tools
 
 As expected, we find many mentions of "comet" and "mascot" not referring to the software for peptide-spectrum matching. We also find instances of software being cited but not mentioned, e.g. the Comet paper is cited in [@PMID30702898] in a sentence "Application of these PSM algorithms (e.g., SEQUEST, X!Tandem)[@PMID24226387][@PMID23148064][@PMID14558131] have been successfully applied to metaproteomic analyses, despite the fact that they were never designed to deal with the complexity of metaproteomic data sets". Searching the name of the software together with some EDAM Topics, such as "Proteomics" helps find specific mentions with or without citation. If searching all literature, a large fraction of the mention-without-citation cases derive from non-open access papers, where the search is limited to titles and abstracts, but all citations are available.
 
-### General Comparison
-
 We used the Europe PMC API to query both for citations and mentioned software tools. For that we used the following approach:
 - Take >30k software tools described in bio.tools and filter for tools with a open access publication
 - Apply the following two queries to the Europe PMC API, each applied to the resulting 13k tools:
@@ -125,7 +123,6 @@ We used the Europe PMC API to query both for citations and mentioned software to
 
 Including the EDAM topics of a software tool considerable decreased the number of unrelated publications for software names similar or equal to 
 widely used words, such as "comet", "Claudio" and "FUJI", but still lead to a considerable overestimation of the number of mentioning papers in several case. This can be seen in the histogram summarizing the numbers for mentioning papers per software tool (Fig. comentions).
-
 
 ![comentions](MentionesPerToolHist.png)
 Figure comentions: The number of publications that mention a software tool from bio.tools, including the name and one of the given EDAM topics. The number of mentioning papers was limited to a maximum of 5000. The x-axis is shown on logarithmic scale to allow seeing a wider range.
