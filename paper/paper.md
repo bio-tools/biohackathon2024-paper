@@ -221,26 +221,6 @@ All developed software is available through https://github.com/bio-tools/biohack
 	4.1 [Encode Text to IOB](https://github.com/bio-tools/biohackathon2024/notebooks/06_process_text_for_machine_learning.ipynb)
 	4.2 [Train BioBERT NER](https://github.com/bio-tools/biohackathon2024/notebooks/07_train_model.ipynb)
 
-.
-├── data
-│   ├── biotools
-│   ├── graph_generation
-│   ├── handcrafted
-│   └── machine_learning
-├── notebooks
-│   ├── 00_download_articles.ipynb
-│   ├── 01_match_articles_with_biotools.ipynb
-│   ├── 02_get_biotool_publication.ipynb
-│   ├── 03_create_adjacency.ipynb
-│   ├── 04_adjacency_to_cytoscape.ipynb
-│   ├── 05_handcrafted.ipynb
-│   ├── 06_process_text_for_machine_learning.ipynb
-│   └── 07_train_model.ipynb
-├── src
-│   └── bh24_literature_mining
-└──tests
-
-
 # Acknowledgements
 We acknowledge the very vivid and inviting environment of the Biohackathon and the ELIXIR team for their splendid organization and partial funding. This format allowed to exchange with experts in the different fields which were very fruitful to this work. TAVA acknowledges travel support by Sanguin Research.
 
