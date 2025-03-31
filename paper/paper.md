@@ -205,20 +205,20 @@ Future work will aim to improve the detection of software mentions to integrate 
 All developed software is available through https://github.com/bio-tools/biohackathon2024. Separate notebooks for each section are located as follows.
 
 1. General Aspects and Methodology
-&nbsp; 1.1. [Download Articles](https://github.com/bio-tools/biohackathon2024/tree/restructure/notebooks/00_download_articles.ipynb)
-&nbsp; 1.2 [Match Articles with Respective bio.tools entities](https://github.com/bio-tools/biohackathon2024/tree/restructure/notebooks/01_match_articles_with_biotools.ipynb)
-&nbsp; 1.3 [Get missing information](https://github.com/bio-tools/biohackathon2024/tree/restructure/notebooks/02_get_biotool_publication.ipynb)
+<code>&nbsp;</code> 1.1. [Download Articles](https://github.com/bio-tools/biohackathon2024/tree/restructure/notebooks/00_download_articles.ipynb)
+<code>&nbsp;</code> 1.2 [Match Articles with Respective bio.tools entities](https://github.com/bio-tools/biohackathon2024/tree/restructure/notebooks/01_match_articles_with_biotools.ipynb)
+<code>&nbsp;</code> 1.3 [Get missing information](https://github.com/bio-tools/biohackathon2024/tree/restructure/notebooks/02_get_biotool_publication.ipynb)
 
 2. Networks of Co-mentions and Co-citations
-&nbsp; 2.1 [Create Adjacency](https://github.com/bio-tools/biohackathon2024/tree/restructure/notebooks/03_create_adjacency.ipynb)
-&nbsp; 2.2 [Move Adjacency to Cytoscape](https://github.com/bio-tools/biohackathon2024/tree/restructure/notebooks/04_adjacency_to_cytoscape.ipynb)
+<code>&nbsp;</code> 2.1 [Create Adjacency](https://github.com/bio-tools/biohackathon2024/tree/restructure/notebooks/03_create_adjacency.ipynb)
+<code>&nbsp;</code> 2.2 [Move Adjacency to Cytoscape](https://github.com/bio-tools/biohackathon2024/tree/restructure/notebooks/04_adjacency_to_cytoscape.ipynb)
 
 3. A Hand-Crafted Literature Mining Approach
-&nbsp; 3.1 [Hand-Crafted Usage Example](https://github.com/bio-tools/biohackathon2024/tree/restructure/notebooks/06_handcrafted.ipynb)
+<code>&nbsp;</code> 3.1 [Hand-Crafted Usage Example](https://github.com/bio-tools/biohackathon2024/tree/restructure/notebooks/06_handcrafted.ipynb)
 
 4. Machine Learning for Improved Literature Mining
-&nbsp; 4.1 [Encode Text to IOB](https://github.com/bio-tools/biohackathon2024/notebooks/06_process_text_for_machine_learning.ipynb)
-&nbsp; 4.2 [Train BioBERT NER](https://github.com/bio-tools/biohackathon2024/notebooks/07_train_model.ipynb)
+<code>&nbsp;</code> 4.1 [Encode Text to IOB](https://github.com/bio-tools/biohackathon2024/notebooks/06_process_text_for_machine_learning.ipynb)
+<code>&nbsp;</code> 4.2 [Train BioBERT NER](https://github.com/bio-tools/biohackathon2024/notebooks/07_train_model.ipynb)
 
 # Acknowledgements
 We acknowledge the very vivid and inviting environment of the Biohackathon and the ELIXIR team for their splendid organization and partial funding. This format allowed to exchange with experts in the different fields which were very fruitful to this work. TAVA acknowledges travel support by Sanguin Research.
