@@ -203,11 +203,43 @@ Future work will aim to improve the detection of software mentions to integrate 
 
 # Jupyter notebooks, GitHub repositories and data repositories
 
-All developed software is available through https://github.com/bio-tools/biohackathon2024
+All developed software is available through https://github.com/bio-tools/biohackathon2024. Separate notebooks for each section are located as follows.
 
-* Please add a list here
-* Make sure you let us know which of these correspond to Jupyter notebooks. Although not supported yet, we plan to add features for them
-* And remember, software and data need a license for them to be used by others, no license means no clear rules so nobody could legally use a non-licensed research object, whatever that object is
+1. General Aspects and Methodology
+	1.1. [Download Articles](https://github.com/bio-tools/biohackathon2024/tree/restructure/notebooks/00_download_articles.ipynb)
+	1.2 [Match Articles with Respective bio.tools entities](https://github.com/bio-tools/biohackathon2024/tree/restructure/notebooks/01_match_articles_with_biotools.ipynb)
+	1.3 [Get missing information] (https://github.com/bio-tools/biohackathon2024/tree/restructure/notebooks/02_get_biotool_publication.ipynb)
+
+2. Networks of Co-mentions and Co-citations
+	2.1 [Create Adjacency](https://github.com/bio-tools/biohackathon2024/tree/restructure/notebooks/03_create_adjacency.ipynb)
+	2.2 [Move Adjacency to Cytoscape](https://github.com/bio-tools/biohackathon2024/tree/restructure/notebooks/04_adjacency_to_cytoscape.ipynb)
+
+3. A Hand-Crafted Literature Mining Approach
+	3.1 [Hand-Crafted Usage Example](https://github.com/bio-tools/biohackathon2024/tree/restructure/notebooks/06_handcrafted.ipynb)
+
+4. Machine Learning for Improved Literature Mining
+	4.1 [Encode Text to IOB](https://github.com/bio-tools/biohackathon2024/notebooks/06_process_text_for_machine_learning.ipynb)
+	4.2 [Train BioBERT NER](https://github.com/bio-tools/biohackathon2024/notebooks/07_train_model.ipynb)
+
+.
+├── data
+│   ├── biotools
+│   ├── graph_generation
+│   ├── handcrafted
+│   └── machine_learning
+├── notebooks
+│   ├── 00_download_articles.ipynb
+│   ├── 01_match_articles_with_biotools.ipynb
+│   ├── 02_get_biotool_publication.ipynb
+│   ├── 03_create_adjacency.ipynb
+│   ├── 04_adjacency_to_cytoscape.ipynb
+│   ├── 05_handcrafted.ipynb
+│   ├── 06_process_text_for_machine_learning.ipynb
+│   └── 07_train_model.ipynb
+├── src
+│   └── bh24_literature_mining
+└──tests
+
 
 # Acknowledgements
 We acknowledge the very vivid and inviting environment of the Biohackathon and the ELIXIR team for their splendid organization and partial funding. This format allowed to exchange with experts in the different fields which were very fruitful to this work. TAVA acknowledges travel support by Sanguin Research.
