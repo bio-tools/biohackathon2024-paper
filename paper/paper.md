@@ -205,9 +205,10 @@ Future work will aim to improve the detection of software mentions to integrate 
 All developed software is available through https://github.com/bio-tools/biohackathon2024. Separate notebooks for each section are located as follows.
 
 1. General Aspects and Methodology
-  - 1.1. [Download Articles](https://github.com/bio-tools/biohackathon2024/tree/restructure/notebooks/00_download_articles.ipynb)
-  - 1.2 [Match Articles with Respective bio.tools entities](https://github.com/bio-tools/biohackathon2024/tree/restructure/notebooks/01_match_articles_with_biotools.ipynb)
-  - 1.3 [Get missing information](https://github.com/bio-tools/biohackathon2024/tree/restructure/notebooks/02_get_biotool_publication.ipynb)
+  - 1.1. [Venn diagrams from Europe PMC queries](https://github.com/bio-tools/biohackathon2024/blob/main/notebooks/Europe_PMC_to_Venn_diagrams.ipynb)   
+  - 1.2. [Download Articles](https://github.com/bio-tools/biohackathon2024/tree/restructure/notebooks/00_download_articles.ipynb)
+  - 1.3 [Match Articles with Respective bio.tools entities](https://github.com/bio-tools/biohackathon2024/tree/restructure/notebooks/01_match_articles_with_biotools.ipynb)
+  - 1.4 [Get missing information](https://github.com/bio-tools/biohackathon2024/tree/restructure/notebooks/02_get_biotool_publication.ipynb)
 
 2. Networks of Co-mentions and Co-citations
  - 2.1 [Create Adjacency](https://github.com/bio-tools/biohackathon2024/tree/restructure/notebooks/03_create_adjacency.ipynb)
