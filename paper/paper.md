@@ -215,7 +215,7 @@ All developed software is available through https://github.com/bio-tools/biohack
  - 2.2 [Move Adjacency to Cytoscape](https://github.com/bio-tools/biohackathon2024/tree/restructure/notebooks/04_adjacency_to_cytoscape.ipynb)
 
 3. A Hand-Crafted Literature Mining Approach
- - 3.1 [Hand-Crafted Usage Example](https://github.com/bio-tools/biohackathon2024/tree/restructure/notebooks/06_handcrafted.ipynb)
+ - 3.1 [Hand-Crafted Usage Example](https://github.com/bio-tools/biohackathon2024/tree/restructure/notebooks/05_handcrafted.ipynb)
 
 4. Machine Learning for Improved Literature Mining
  - 4.1 [Encode Text to IOB](https://github.com/bio-tools/biohackathon2024/notebooks/06_process_text_for_machine_learning.ipynb)
